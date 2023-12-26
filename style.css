@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+/*大きさの計算*/
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*iOSフォーム要素の初期化*/
+input, button, textarea, select {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+body {
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%; /*スマホ横向き時のフォントサイズ*/
+	text-size-adjust: 100%; /*スマホ横向き時のフォントサイズ*/
+	-webkit-font-feature-settings: 'palt';/*文字詰め*/
+	font-feature-settings: 'palt';/*文字詰め*/
+}
+
+body *{
+  box-sizing: inherit; /* box-sizingの値は継承されないので明示的に設定 */
+}
+
+/*画像の調整*/
+img {
+    max-width: 100%;
+    height: auto;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/*****LPコーディングここから*****/
+.lp-content{
+	max-width: 768px;
+	margin: 0 auto;
+	background: white;
+}
+
+/***背景を設定したいとき***/
+/*背景に色を付ける*/
+/*
+.content01 {
+    background: #fff7f8;
+}
+*/
+
+/*背景を固定したいとき　例
+.content01 {
+    background-image: url("img/bg-content02.jpg");
+	background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+	background-size: contain;
+}*/
+
+
+/***メールフォーム こちらにメールフォームのコーディングを記述ください***/
+
+
+
+/***フッター***/
+.footer-section {
+    background: lightgrey; /*好きな色を設定してください*/
+    padding: 2rem;
+}
+
+ul.footer-menu {
+    display: flex;
+    justify-content: center;
+}
+
+ul.footer-menu li {
+    list-style: none;
+}
+
+ul.footer-menu li a {
+    color: black;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.logo {
+    width: 50%;  /*ロゴにあわせて調整してください*/
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width:768px) {
+	ul.footer-menu {
+    display: block;
+    text-align: center;
+}
+	
+	.logo {
+    width: 90%;  /*ロゴにあわせて調整してください*/
+}
+	
+	.footer-section {
+    padding: 1rem;
+}
+}	
